@@ -1,7 +1,6 @@
 # Human judgment doesn't leave the software factory. It relocates.
 
 > 原文：https://addyosmani.com/blog/human-judgment-doesnt-leave-the-software/
->
 > 发布日期：2026-08-21
 
 ---
@@ -28,23 +27,17 @@ You want to build your factory so some aspects of human taste get encoded in the
 
 So I started off by saying **a software factory is a repeatable loop around software work**. We can actually look at a prompt that demonstrates a very small factory loop here:
 
-> >
-> >
-> ``` highlight
-> Read GitHub issue #123 and the repository instructions before changing code.
->
-> Implement only the stated acceptance criteria. Do not modify authentication,
-> billing, migrations, or existing test assertions. Work in a branch and keep the
-> diff reviewable.
->
-> Run npm run lint, npm test, and npm run build. If a required check cannot run,
-> stop and explain why. Open a draft pull request with the checks you ran, the
-> remaining risks, and any decision a human still needs to make. Do not merge.
-> ```
->
-> </div>
->
-> </div>
+```markdown
+Read GitHub issue #123 and the repository instructions before changing code.
+
+Implement only the stated acceptance criteria. Do not modify authentication,
+billing, migrations, or existing test assertions. Work in a branch and keep the
+diff reviewable.
+
+Run npm run lint, npm test, and npm run build. If a required check cannot run,
+stop and explain why. Open a draft pull request with the checks you ran, the
+remaining risks, and any decision a human still needs to make. Do not merge.
+```
 
 A goal can keep this moving until the checks pass and we can poll GitHub issues for any specific labels or review open pull requests each morning. Branch protection could enforce a merge boundary and the human can stay in the loop by choosing what becomes ready, reviewing and making the final merge calls etc.
 

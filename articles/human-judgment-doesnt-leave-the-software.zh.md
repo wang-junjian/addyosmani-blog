@@ -1,7 +1,6 @@
 # 人类的判断力从未离开软件工厂,它只是换了位置。
 
 > 原文：[Human judgment doesn't leave the software factory. It relocates.](https://addyosmani.com/blog/human-judgment-doesnt-leave-the-software/)
->
 > 发布日期：2026-08-21
 
 ---
@@ -28,23 +27,17 @@
 
 所以我在开头说,**软件工厂是围绕软件工作构建的一个可重复循环**。其实,看一个提示词就能看到一个极小的工厂循环：
 
-> >
-> >
-> ``` highlight
-> Read GitHub issue #123 and the repository instructions before changing code.
->
-> Implement only the stated acceptance criteria. Do not modify authentication,
-> billing, migrations, or existing test assertions. Work in a branch and keep the
-> diff reviewable.
->
-> Run npm run lint, npm test, and npm run build. If a required check cannot run,
-> stop and explain why. Open a draft pull request with the checks you ran, the
-> remaining risks, and any decision a human still needs to make. Do not merge.
-> ```
->
-> </div>
->
-> </div>
+```markdown
+Read GitHub issue #123 and the repository instructions before changing code.
+
+Implement only the stated acceptance criteria. Do not modify authentication,
+billing, migrations, or existing test assertions. Work in a branch and keep the
+diff reviewable.
+
+Run npm run lint, npm test, and npm run build. If a required check cannot run,
+stop and explain why. Open a draft pull request with the checks you ran, the
+remaining risks, and any decision a human still needs to make. Do not merge.
+```
 
 一个目标就能让这套流程持续运转,直到所有检查通过;我们也可以每天早上轮询带有特定标签的 GitHub issue,或者查看那些开放的 PR。分支保护可以强制出一条合并边界,而人则通过决定什么进入就绪状态、做评审、下最终的合并决定等方式留在循环里。
 

@@ -2,6 +2,7 @@
 
 [Addy Osmani](https://addyosmani.com/)（Google Chrome 工程负责人）2026 年关于 **智能体工程（agentic engineering）** 的 24 篇博客文章存档，每篇含英文原文与中文译文。
 
+- **在线版本**：https://wangjunjian.com/addyosmani-blog/ （可读版站点，含分类索引、全文搜索、中英切换）
 - **来源**：https://addyosmani.com/blog/
 - **采集时间**：2026-11-08
 - **文章时间跨度**：2026-04-07 ~ 2026-09-14
@@ -133,12 +134,25 @@
 │   ├── <slug>.md          # 英文原文（Markdown）
 │   └── <slug>.zh.md       # 中文译文
 ├── images/                # 全部配图，命名 <slug>-<原文件名>
+├── assets/                # 站点样式、脚本、图标
+├── build.py               # 静态站点构建脚本
+├── requirements.txt       # 构建依赖（仅 Python-Markdown）
+├── .github/workflows/     # 推送到 main 后自动构建并部署
 └── README.md
 ```
 
 - `slug` 取自原文 URL，如 `https://addyosmani.com/blog/intent-debt/` → `intent-debt`
 - 中文版一律加 `.zh.md` 后缀，与英文版严格一一对应
 - 图片名带 slug 前缀，因为不同文章存在大量同名文件（`01.webp`、`02.webp`），不加前缀会互相覆盖
+
+### 构建与预览
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/python build.py --serve      # 构建到 _site/ 并起本地预览（127.0.0.1:8777）
+```
+
+`build.py` 只做三件事：把 Markdown 渲染成 HTML、把 README 的分类表与推荐路径解析成站点导航、复制静态资源。产物是零外部依赖的纯静态文件（不引 CDN、不加载远程字体），`_site/` 已在 `.gitignore` 中，由 GitHub Actions 在推送时构建。
 
 每篇文件头部统一格式：
 
