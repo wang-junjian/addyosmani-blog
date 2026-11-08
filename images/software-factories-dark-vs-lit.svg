@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1120 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A dark factory pipeline versus a lit factory pipeline" style="width:100%;height:auto;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif">
+  <defs>
+    <marker id="sfc-arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#8A8574"/></marker>
+    <marker id="sfc-arrowl" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#C8891A"/></marker>
+  </defs>
+  <rect x="8" y="8" width="1104" height="414" rx="20" fill="#FAF8F1" stroke="#E7E1D3" stroke-width="2"/>
+
+  <!-- DARK -->
+  <text x="42" y="70" font-size="16" font-weight="700" letter-spacing="1.5" fill="#3A3A44">DARK · lights off · no human reads the code</text>
+  <g font-size="13">
+    <rect x="42" y="88" width="120" height="60" rx="10" fill="#2B2B33" stroke="#3A3A44"/><text x="102" y="123" text-anchor="middle" fill="#EDEBE4">queue</text>
+    <rect x="230" y="88" width="120" height="60" rx="10" fill="#2B2B33" stroke="#3A3A44"/><text x="290" y="123" text-anchor="middle" fill="#EDEBE4">build</text>
+    <rect x="418" y="88" width="150" height="60" rx="10" fill="#2B2B33" stroke="#3A3A44"/><text x="493" y="115" text-anchor="middle" fill="#EDEBE4">auto-checks</text><text x="493" y="133" text-anchor="middle" fill="#9c98a5" font-size="11">tests · scans</text>
+    <rect x="636" y="88" width="150" height="60" rx="10" fill="#2B2B33" stroke="#3A3A44"/><text x="711" y="115" text-anchor="middle" fill="#EDEBE4">agentic review</text><text x="711" y="133" text-anchor="middle" fill="#9c98a5" font-size="11">machine grades machine</text>
+    <rect x="854" y="88" width="120" height="60" rx="10" fill="#1F5B3E" stroke="#2E7D57"/><text x="914" y="123" text-anchor="middle" fill="#DFF3E7" font-weight="700">prod</text>
+  </g>
+  <line x1="162" y1="118" x2="226" y2="118" stroke="#8A8574" stroke-width="2" marker-end="url(#sfc-arrow)"/>
+  <line x1="350" y1="118" x2="414" y2="118" stroke="#8A8574" stroke-width="2" marker-end="url(#sfc-arrow)"/>
+  <line x1="568" y1="118" x2="632" y2="118" stroke="#8A8574" stroke-width="2" marker-end="url(#sfc-arrow)"/>
+  <line x1="786" y1="118" x2="850" y2="118" stroke="#8A8574" stroke-width="2" marker-end="url(#sfc-arrow)"/>
+  <text x="1000" y="112" font-size="12" fill="#6E6A5E">fast,</text>
+  <text x="1000" y="130" font-size="12" fill="#6E6A5E">then rots</text>
+
+  <!-- divider -->
+  <line x1="42" y1="188" x2="1078" y2="188" stroke="#E7E1D3" stroke-width="1.5"/>
+
+  <!-- LIT -->
+  <text x="42" y="232" font-size="16" font-weight="700" letter-spacing="1.5" fill="#C8891A">LIT · human judgment upstream and at the gate</text>
+  <g font-size="12.5" fill="#23221E">
+    <rect x="42" y="250" width="104" height="60" rx="10" fill="#FFFFFF" stroke="#DAD3C2"/><text x="94" y="285" text-anchor="middle">queue</text>
+    <rect x="176" y="242" width="140" height="76" rx="10" fill="#FCE9BE" stroke="#C8891A" stroke-width="2.5"/><text x="246" y="270" text-anchor="middle" font-weight="700">design +</text><text x="246" y="288" text-anchor="middle" font-weight="700">architecture</text><text x="246" y="306" text-anchor="middle" font-size="10.5" fill="#C8891A">◐ human</text>
+    <rect x="346" y="250" width="104" height="60" rx="10" fill="#FFFFFF" stroke="#DAD3C2"/><text x="398" y="285" text-anchor="middle">build</text>
+    <rect x="480" y="250" width="140" height="60" rx="10" fill="#FFFFFF" stroke="#DAD3C2"/><text x="550" y="277" text-anchor="middle">auto-checks</text><text x="550" y="295" text-anchor="middle" font-size="10.5" fill="#6E6A5E">tests · scans</text>
+    <rect x="650" y="242" width="150" height="76" rx="10" fill="#FCE9BE" stroke="#C8891A" stroke-width="2.5"/><text x="725" y="270" text-anchor="middle" font-weight="700">review</text><text x="725" y="288" text-anchor="middle" font-size="11" fill="#7a5a12">agentic + human</text><text x="725" y="306" text-anchor="middle" font-size="10.5" fill="#C8891A">◐ human</text>
+    <rect x="830" y="250" width="104" height="60" rx="10" fill="#D7EEDF" stroke="#2E7D57"/><text x="882" y="285" text-anchor="middle" font-weight="700" fill="#1F5B3E">prod</text>
+  </g>
+  <line x1="146" y1="280" x2="172" y2="280" stroke="#C8891A" stroke-width="2" marker-end="url(#sfc-arrowl)"/>
+  <line x1="316" y1="280" x2="342" y2="280" stroke="#8A8574" stroke-width="2" marker-end="url(#sfc-arrow)"/>
+  <line x1="450" y1="280" x2="476" y2="280" stroke="#8A8574" stroke-width="2" marker-end="url(#sfc-arrow)"/>
+  <line x1="620" y1="280" x2="646" y2="280" stroke="#C8891A" stroke-width="2" marker-end="url(#sfc-arrowl)"/>
+  <line x1="800" y1="280" x2="826" y2="280" stroke="#8A8574" stroke-width="2" marker-end="url(#sfc-arrow)"/>
+  <text x="958" y="274" font-size="12" fill="#6E6A5E">slower per PR,</text>
+  <text x="958" y="292" font-size="12" fill="#6E6A5E">compounds</text>
+
+  <text x="560" y="372" text-anchor="middle" font-size="13.5" fill="#23221E" font-weight="600">Same factory. The only difference is where the lights are on.</text>
+  <text x="560" y="398" text-anchor="middle" font-size="12.5" fill="#6E6A5E">Dark buys throughput and pays in comprehension. Lit spends attention at the two spots where a wrong answer is expensive.</text>
+</svg>

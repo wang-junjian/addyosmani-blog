@@ -1,0 +1,104 @@
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A left-to-right software factory. Intent enters on the left. It passes through three constraint stages: Shape, which bounds the work before it begins; Feedback, where the agent works in a sandbox with tests and mechanical back-pressure; and Boundary, the release gate of acceptance, QA and security that decides whether output can cross into production on the right. Exceptions with weak evidence, novelty or risk escalate up to a human. Every production incident loops back to leave behind a new test, monitor or policy.">
+  <style>
+    svg{
+      --ink:#2b2f36; --sub:#6b7280; --flow:#8a94a3;
+      --accent:#e07828; --accentText:#b45f1e; --accentSoft:rgba(224,120,40,0.06); --panelStroke:#d98a44;
+      --blue:#3f7fb8; --blueText:#356a9c; --blueSoft:rgba(63,127,184,0.07);
+      --ok:#2f9e5f; --okText:#248a4e; --okSoft:rgba(47,158,95,0.07);
+      --warn:#b98a2e; --warnText:#8f6a22; --warnSoft:rgba(185,138,46,0.09);
+    }
+    @media (prefers-color-scheme: dark){
+      svg{
+        --ink:#e8ebef; --sub:#9aa0a8; --flow:#7d8794;
+        --accent:#e0925a; --accentText:#e0925a; --accentSoft:rgba(224,120,40,0.12); --panelStroke:#c07d3e;
+        --blue:#6aa0d0; --blueText:#6aa0d0; --blueSoft:rgba(63,127,184,0.13);
+        --ok:#3fb473; --okText:#5cc98a; --okSoft:rgba(47,158,95,0.13);
+        --warn:#d3ab52; --warnText:#d3ab52; --warnSoft:rgba(211,171,82,0.14);
+      }
+    }
+    .ttl{font:700 24px system-ui,-apple-system,Segoe UI,sans-serif;fill:var(--ink)}
+    .cap{font:500 14.5px system-ui,-apple-system,sans-serif;fill:var(--sub)}
+    .node{font:700 15px system-ui,-apple-system,sans-serif;fill:var(--ink)}
+    .nsub{font:500 12px system-ui,-apple-system,sans-serif;fill:var(--sub)}
+    .phead{font:700 16px system-ui,-apple-system,sans-serif}
+    .psub{font:600 12.5px system-ui,-apple-system,sans-serif;fill:var(--sub)}
+    .pitem{font:500 13.5px system-ui,-apple-system,sans-serif;fill:var(--ink)}
+    .pnote{font:italic 600 12px system-ui,-apple-system,sans-serif;fill:var(--sub)}
+    .flow{fill:none;stroke:var(--flow);stroke-width:2.6}
+    .esc{fill:none;stroke:var(--warn);stroke-width:2.2;stroke-dasharray:5 4}
+    .esclab{font:600 12.5px system-ui,-apple-system,sans-serif;fill:var(--warnText)}
+    .ret{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-dasharray:6 5}
+    .retlab{font:600 13px system-ui,-apple-system,sans-serif;fill:var(--accentText)}
+    .n-neutral{fill:none;stroke:var(--flow);stroke-width:2}
+    .b-shape{fill:var(--accentSoft);stroke:var(--accent);stroke-width:2}
+    .b-feed{fill:var(--blueSoft);stroke:var(--blue);stroke-width:2}
+    .b-bound{fill:var(--okSoft);stroke:var(--ok);stroke-width:2}
+    .b-prod{fill:var(--okSoft);stroke:var(--ok);stroke-width:2.4}
+    .b-human{fill:var(--warnSoft);stroke:var(--warn);stroke-width:2}
+    .mk-flow{fill:var(--flow)}.mk-warn{fill:var(--warn)}.mk-accent{fill:var(--accent)}
+  </style>
+  <defs>
+    <marker id="mf" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path class="mk-flow" d="M0,0 L7,3 L0,6 Z"/></marker>
+    <marker id="mw" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path class="mk-warn" d="M0,0 L7,3 L0,6 Z"/></marker>
+    <marker id="mr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path class="mk-accent" d="M0,0 L7,3 L0,6 Z"/></marker>
+  </defs>
+
+  <text class="ttl" x="640" y="40" text-anchor="middle">The software factory: intent enters, agents implement, evidence decides what ships</text>
+
+  <!-- HUMAN -->
+  <rect class="b-human" x="548" y="86" width="184" height="50" rx="12"/>
+  <text class="node" x="640" y="106" text-anchor="middle">HUMAN</text>
+  <text class="nsub" x="640" y="124" text-anchor="middle">reviews the exceptions</text>
+  <path class="esc" d="M754,186 C 726,160 706,150 696,140" marker-end="url(#mw)"/>
+  <text class="esclab" x="770" y="168" text-anchor="start">escalate: weak evidence, novelty, risk</text>
+
+  <!-- INTENT -->
+  <rect class="n-neutral" x="40" y="272" width="116" height="76" rx="12"/>
+  <text class="node" x="98" y="306" text-anchor="middle">INTENT</text>
+  <text class="nsub" x="98" y="326" text-anchor="middle">issue, spec, goal</text>
+
+  <!-- Panel: SHAPE -->
+  <rect class="b-shape" x="175" y="190" width="245" height="250" rx="14"/>
+  <text class="phead" x="297" y="226" text-anchor="middle" fill="var(--accentText)">SHAPE</text>
+  <text class="psub" x="297" y="247" text-anchor="middle">before work begins</text>
+  <circle cx="199" cy="285" r="3.5" fill="var(--accent)"/><text class="pitem" x="211" y="290" text-anchor="start">scoped subtasks</text>
+  <circle cx="199" cy="320" r="3.5" fill="var(--accent)"/><text class="pitem" x="211" y="325" text-anchor="start">risk boundaries</text>
+  <circle cx="199" cy="355" r="3.5" fill="var(--accent)"/><text class="pitem" x="211" y="360" text-anchor="start">intent + context</text>
+  <text class="pnote" x="297" y="410" text-anchor="middle">constraints that bound the work</text>
+
+  <!-- Panel: FEEDBACK -->
+  <rect class="b-feed" x="452" y="190" width="286" height="250" rx="14"/>
+  <text class="phead" x="595" y="226" text-anchor="middle" fill="var(--blueText)">FEEDBACK</text>
+  <text class="psub" x="595" y="247" text-anchor="middle">while the agent works</text>
+  <circle cx="476" cy="285" r="3.5" fill="var(--blue)"/><text class="pitem" x="488" y="290" text-anchor="start">sandbox + reproducible build</text>
+  <circle cx="476" cy="320" r="3.5" fill="var(--blue)"/><text class="pitem" x="488" y="325" text-anchor="start">tests, types, diagnostics</text>
+  <circle cx="476" cy="355" r="3.5" fill="var(--blue)"/><text class="pitem" x="488" y="360" text-anchor="start">mechanical back-pressure</text>
+  <text class="pnote" x="595" y="410" text-anchor="middle">the agent iterates on its own</text>
+
+  <!-- Panel: BOUNDARY -->
+  <rect class="b-bound" x="770" y="190" width="286" height="250" rx="14"/>
+  <text class="phead" x="913" y="226" text-anchor="middle" fill="var(--okText)">BOUNDARY</text>
+  <text class="psub" x="913" y="247" text-anchor="middle">can it cross to prod?</text>
+  <circle cx="794" cy="285" r="3.5" fill="var(--ok)"/><text class="pitem" x="806" y="290" text-anchor="start">acceptance + QA</text>
+  <circle cx="794" cy="320" r="3.5" fill="var(--ok)"/><text class="pitem" x="806" y="325" text-anchor="start">security scans</text>
+  <circle cx="794" cy="355" r="3.5" fill="var(--ok)"/><text class="pitem" x="806" y="360" text-anchor="start">release gate (CI)</text>
+  <text class="pnote" x="913" y="410" text-anchor="middle">a passing test is a claim, not a verdict</text>
+
+  <!-- PRODUCTION -->
+  <rect class="b-prod" x="1090" y="272" width="150" height="76" rx="12"/>
+  <text class="node" x="1165" y="306" text-anchor="middle" fill="var(--okText)">PRODUCTION</text>
+  <text class="nsub" x="1165" y="326" text-anchor="middle">monitored</text>
+
+  <!-- flow arrows -->
+  <line class="flow" x1="158" y1="310" x2="171" y2="310" marker-end="url(#mf)"/>
+  <line class="flow" x1="422" y1="310" x2="448" y2="310" marker-end="url(#mf)"/>
+  <line class="flow" x1="740" y1="310" x2="766" y2="310" marker-end="url(#mf)"/>
+  <line class="flow" x1="1058" y1="310" x2="1086" y2="310" marker-end="url(#mf)"/>
+
+  <!-- return loop: incidents compound -->
+  <path class="ret" d="M1165,350 L1165,500 Q1165,520 1145,520 L317,520 Q297,520 297,500 L297,442" marker-end="url(#mr)"/>
+  <text class="retlab" x="731" y="510" text-anchor="middle">each incident leaves behind a new test, monitor or policy</text>
+
+  <text class="cap" x="640" y="576" text-anchor="middle">Some constraints shape the work, others give feedback during it, others decide if it can cross to production.</text>
+  <text class="cap" x="640" y="686" text-anchor="middle">Generation and verification have to scale together. Rejecting bad work fast, and standing behind what remains, is the advantage.</text>
+</svg>

@@ -1,0 +1,105 @@
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A change is classified by risk, evidence and track record, then routed into one of three lanes. Routine and proven changes get high autonomy: the agent proceeds alone and ships. Non-trivial changes get gated autonomy: automated checks plus targeted review before shipping. Novel or high-risk changes with weak evidence require a human decision, for example authentication, permissions, money, migrations and irreversible actions. Consistent success earns a change more autonomy over time.">
+  <style>
+    svg{
+      --ink:#2b2f36; --sub:#6b7280; --flow:#8a94a3;
+      --accent:#e07828; --accentText:#b45f1e;
+      --ok:#2f9e5f; --okText:#248a4e; --okSoft:rgba(47,158,95,0.07);
+      --warn:#b98a2e; --warnText:#8f6a22; --warnSoft:rgba(185,138,46,0.09);
+      --bad:#c0554d; --badText:#b0463e; --badSoft:rgba(192,85,77,0.08);
+    }
+    @media (prefers-color-scheme: dark){
+      svg{
+        --ink:#e8ebef; --sub:#9aa0a8; --flow:#7d8794;
+        --accent:#e0925a; --accentText:#e0925a;
+        --ok:#3fb473; --okText:#5cc98a; --okSoft:rgba(47,158,95,0.13);
+        --warn:#d3ab52; --warnText:#d3ab52; --warnSoft:rgba(211,171,82,0.14);
+        --bad:#cf6a60; --badText:#cf6a60; --badSoft:rgba(207,106,96,0.14);
+      }
+    }
+    .ttl{font:700 25px system-ui,-apple-system,Segoe UI,sans-serif;fill:var(--ink)}
+    .cap{font:500 14.5px system-ui,-apple-system,sans-serif;fill:var(--sub)}
+    .node{font:700 15px system-ui,-apple-system,sans-serif;fill:var(--ink)}
+    .nsub{font:500 12px system-ui,-apple-system,sans-serif;fill:var(--sub)}
+    .box{font:700 15px system-ui,-apple-system,sans-serif;fill:var(--ink)}
+    .bsub{font:500 12.5px system-ui,-apple-system,sans-serif;fill:var(--sub)}
+    .big{font:700 20px system-ui,-apple-system,sans-serif}
+    .tag{font:700 11px system-ui,-apple-system,sans-serif;letter-spacing:0.06em}
+    .flow{fill:none;stroke:var(--flow);stroke-width:2.4}
+    .earn{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-dasharray:6 5}
+    .earnlab{font:700 13.5px system-ui,-apple-system,sans-serif;fill:var(--accentText)}
+    .n-neutral{fill:none;stroke:var(--flow);stroke-width:2}
+    .b-ok{fill:var(--okSoft);stroke:var(--ok);stroke-width:2}
+    .b-warn{fill:var(--warnSoft);stroke:var(--warn);stroke-width:2}
+    .b-bad{fill:var(--badSoft);stroke:var(--bad);stroke-width:2}
+    .mk-flow{fill:var(--flow)}.mk-accent{fill:var(--accent)}
+  </style>
+  <defs>
+    <marker id="mf" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path class="mk-flow" d="M0,0 L7,3 L0,6 Z"/></marker>
+    <marker id="ma" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path class="mk-accent" d="M0,0 L7,3 L0,6 Z"/></marker>
+  </defs>
+
+  <text class="ttl" x="640" y="42" text-anchor="middle">Autonomy is earned by passing verification loops, not granted by the model</text>
+
+  <!-- CHANGE -->
+  <rect class="n-neutral" x="34" y="332" width="104" height="72" rx="12"/>
+  <text class="node" x="86" y="364" text-anchor="middle">CHANGE</text>
+  <text class="nsub" x="86" y="384" text-anchor="middle">a proposed diff</text>
+
+  <!-- CLASSIFY -->
+  <rect class="n-neutral" x="174" y="324" width="172" height="88" rx="12"/>
+  <text class="node" x="260" y="360" text-anchor="middle">CLASSIFY</text>
+  <text class="nsub" x="260" y="380" text-anchor="middle">risk, evidence,</text>
+  <text class="nsub" x="260" y="396" text-anchor="middle">track record</text>
+
+  <line class="flow" x1="140" y1="368" x2="171" y2="368" marker-end="url(#mf)"/>
+
+  <!-- branch arrows -->
+  <path class="flow" d="M348,352 C 392,300 400,224 426,190" marker-end="url(#mf)"/>
+  <path class="flow" d="M348,368 L426,368" marker-end="url(#mf)"/>
+  <path class="flow" d="M348,384 C 392,436 400,512 426,546" marker-end="url(#mf)"/>
+
+  <!-- LANE A: routine + proven (green) -->
+  <rect class="b-ok" x="430" y="146" width="212" height="82" rx="12"/>
+  <text class="box" x="536" y="182" text-anchor="middle" fill="var(--okText)">Routine, proven</text>
+  <text class="bsub" x="536" y="203" text-anchor="middle">seen this kind before</text>
+  <line class="flow" x1="644" y1="187" x2="678" y2="187" marker-end="url(#mf)"/>
+  <rect class="b-ok" x="682" y="146" width="212" height="82" rx="12"/>
+  <text class="box" x="788" y="193" text-anchor="middle">Agent proceeds alone</text>
+  <line class="flow" x1="896" y1="187" x2="930" y2="187" marker-end="url(#mf)"/>
+  <rect class="b-ok" x="934" y="146" width="228" height="82" rx="12"/>
+  <text class="big" x="1048" y="182" text-anchor="middle" fill="var(--okText)">SHIP</text>
+  <text class="tag" x="1048" y="205" text-anchor="middle" fill="var(--okText)">HIGH AUTONOMY</text>
+
+  <!-- LANE B: non-trivial (amber) -->
+  <rect class="b-warn" x="430" y="326" width="212" height="82" rx="12"/>
+  <text class="box" x="536" y="362" text-anchor="middle" fill="var(--warnText)">Non-trivial</text>
+  <text class="bsub" x="536" y="383" text-anchor="middle">real blast radius</text>
+  <line class="flow" x1="644" y1="367" x2="678" y2="367" marker-end="url(#mf)"/>
+  <rect class="b-warn" x="682" y="326" width="212" height="82" rx="12"/>
+  <text class="box" x="788" y="362" text-anchor="middle">Auto-checks +</text>
+  <text class="box" x="788" y="383" text-anchor="middle">targeted review</text>
+  <line class="flow" x1="896" y1="367" x2="930" y2="367" marker-end="url(#mf)"/>
+  <rect class="b-warn" x="934" y="326" width="228" height="82" rx="12"/>
+  <text class="box" x="1048" y="362" text-anchor="middle" fill="var(--warnText)">Ship after review</text>
+  <text class="tag" x="1048" y="385" text-anchor="middle" fill="var(--warnText)">GATED AUTONOMY</text>
+
+  <!-- LANE C: novel / high-risk (red) -->
+  <rect class="b-bad" x="430" y="506" width="212" height="82" rx="12"/>
+  <text class="box" x="536" y="542" text-anchor="middle" fill="var(--badText)">Novel, high-risk</text>
+  <text class="bsub" x="536" y="563" text-anchor="middle">weak evidence</text>
+  <line class="flow" x1="644" y1="547" x2="678" y2="547" marker-end="url(#mf)"/>
+  <rect class="b-bad" x="682" y="506" width="212" height="82" rx="12"/>
+  <text class="box" x="788" y="553" text-anchor="middle">Human decides</text>
+  <line class="flow" x1="896" y1="547" x2="930" y2="547" marker-end="url(#mf)"/>
+  <rect class="b-bad" x="934" y="506" width="228" height="82" rx="12"/>
+  <text class="bsub" x="1048" y="540" text-anchor="middle">auth, permissions, money,</text>
+  <text class="bsub" x="1048" y="558" text-anchor="middle">migrations, irreversible</text>
+  <text class="tag" x="1048" y="578" text-anchor="middle" fill="var(--badText)">HUMAN DECISION</text>
+
+  <!-- earned arrow: consistent success promotes work upward -->
+  <path class="earn" d="M1206,556 L1206,196" marker-end="url(#ma)"/>
+  <text class="earnlab" x="1226" y="376" text-anchor="middle" transform="rotate(-90 1226 376)">consistent success earns more autonomy</text>
+
+  <text class="cap" x="600" y="660" text-anchor="middle">Autonomy is a property of the task, the evidence and the harness, not the model's reputation, and not a permanent setting.</text>
+  <text class="cap" x="600" y="686" text-anchor="middle">Prove a change routine and it moves up. Novelty, risk and weak evidence meet resistance much earlier.</text>
+</svg>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1120 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The agentic software factory as a closed loop" style="width:100%;height:auto;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif">
+  <defs>
+    <marker id="sfb-arrow" markerWidth="11" markerHeight="11" refX="7.5" refY="3.2" orient="auto"><path d="M0,0 L7.5,3.2 L0,6.4 Z" fill="#8A8574"/></marker>
+  </defs>
+  <rect x="8" y="8" width="1104" height="544" rx="20" fill="#FAF8F1" stroke="#E7E1D3" stroke-width="2"/>
+  <text x="560" y="46" text-anchor="middle" font-size="18" font-weight="700" letter-spacing="2" fill="#C8891A">THE AGENTIC SOFTWARE FACTORY</text>
+  <text x="560" y="70" text-anchor="middle" font-size="13.5" font-style="italic" fill="#6E6A5E">one big loop: intent and signals in, shipped software out, back to signals</text>
+
+  <!-- nodes -->
+  <g font-size="14" fill="#23221E">
+    <!-- intent -->
+    <rect x="60" y="120" width="180" height="96" rx="12" fill="#EAF1E6" stroke="#9BB98C"/>
+    <text x="150" y="148" text-anchor="middle" font-weight="700">intent</text>
+    <text x="150" y="172" text-anchor="middle" font-size="12.5" fill="#4d5a45">vision · product</text>
+    <text x="150" y="190" text-anchor="middle" font-size="12.5" fill="#4d5a45">managers · engineers</text>
+    <!-- queue -->
+    <rect x="330" y="132" width="150" height="72" rx="12" fill="#FFFFFF" stroke="#DAD3C2"/>
+    <text x="405" y="163" text-anchor="middle" font-weight="700">the queue</text>
+    <text x="405" y="184" text-anchor="middle" font-size="12" fill="#6E6A5E">what to build</text>
+    <!-- harness -->
+    <rect x="560" y="120" width="190" height="96" rx="12" fill="#FFFFFF" stroke="#DAD3C2"/>
+    <text x="655" y="147" text-anchor="middle" font-weight="700">the harness</text>
+    <text x="655" y="170" text-anchor="middle" font-size="12" fill="#6E6A5E">orchestrate · sandbox</text>
+    <text x="655" y="187" text-anchor="middle" font-size="12" fill="#6E6A5E">model · build the change</text>
+    <!-- checks -->
+    <rect x="840" y="120" width="210" height="96" rx="12" fill="#FFFFFF" stroke="#DAD3C2"/>
+    <text x="945" y="146" text-anchor="middle" font-weight="700">automated checks</text>
+    <text x="945" y="168" text-anchor="middle" font-size="12" fill="#6E6A5E">ci/cd · unit tests</text>
+    <text x="945" y="185" text-anchor="middle" font-size="12" fill="#6E6A5E">static + security scans</text>
+    <!-- review (the lights) -->
+    <rect x="840" y="300" width="210" height="104" rx="12" fill="#FCE9BE" stroke="#C8891A" stroke-width="2.5"/>
+    <text x="945" y="328" text-anchor="middle" font-weight="700">review</text>
+    <text x="945" y="350" text-anchor="middle" font-size="12" fill="#7a5a12">agentic code review</text>
+    <text x="945" y="367" text-anchor="middle" font-size="12" fill="#7a5a12">+ human reviews the change</text>
+    <text x="945" y="390" text-anchor="middle" font-size="11.5" font-weight="700" fill="#C8891A">◐ this is the light switch</text>
+    <!-- deploy -->
+    <rect x="590" y="316" width="160" height="72" rx="12" fill="#D7EEDF" stroke="#2E7D57"/>
+    <text x="670" y="347" text-anchor="middle" font-weight="700" fill="#1F5B3E">deploy</text>
+    <text x="670" y="368" text-anchor="middle" font-size="12" fill="#2E7D57">rollout to prod</text>
+    <!-- monitor -->
+    <rect x="360" y="316" width="150" height="72" rx="12" fill="#FFFFFF" stroke="#DAD3C2"/>
+    <text x="435" y="347" text-anchor="middle" font-weight="700">monitor</text>
+    <text x="435" y="368" text-anchor="middle" font-size="12" fill="#6E6A5E">prod telemetry</text>
+    <!-- signals -->
+    <rect x="90" y="304" width="180" height="96" rx="12" fill="#F6E7E7" stroke="#C98B8B"/>
+    <text x="180" y="332" text-anchor="middle" font-weight="700" fill="#7a3b3b">signals</text>
+    <text x="180" y="355" text-anchor="middle" font-size="12" fill="#7a3b3b">complaints · feature</text>
+    <text x="180" y="372" text-anchor="middle" font-size="12" fill="#7a3b3b">requests · incidents</text>
+  </g>
+
+  <!-- top flow -->
+  <line x1="240" y1="168" x2="326" y2="168" stroke="#8A8574" stroke-width="2.2" marker-end="url(#sfb-arrow)"/>
+  <line x1="480" y1="168" x2="556" y2="168" stroke="#8A8574" stroke-width="2.2" marker-end="url(#sfb-arrow)"/>
+  <line x1="750" y1="168" x2="836" y2="168" stroke="#8A8574" stroke-width="2.2" marker-end="url(#sfb-arrow)"/>
+  <!-- checks down to review -->
+  <line x1="945" y1="216" x2="945" y2="296" stroke="#8A8574" stroke-width="2.2" marker-end="url(#sfb-arrow)"/>
+  <!-- review to deploy -->
+  <line x1="840" y1="352" x2="754" y2="352" stroke="#8A8574" stroke-width="2.2" marker-end="url(#sfb-arrow)"/>
+  <!-- deploy to monitor -->
+  <line x1="590" y1="352" x2="514" y2="352" stroke="#8A8574" stroke-width="2.2" marker-end="url(#sfb-arrow)"/>
+  <!-- monitor to signals -->
+  <line x1="360" y1="352" x2="274" y2="352" stroke="#8A8574" stroke-width="2.2" marker-end="url(#sfb-arrow)"/>
+  <!-- signals back up into queue (close the loop) -->
+  <path d="M 250,320 C 330,270 340,250 400,208" fill="none" stroke="#C98B8B" stroke-width="2.2" stroke-dasharray="5 5" marker-end="url(#sfb-arrow)"/>
+  <text x="332" y="250" font-size="12" font-style="italic" fill="#a35b5b">route incidents in</text>
+
+  <text x="560" y="470" text-anchor="middle" font-size="14" fill="#23221E" font-weight="600">Everything left of the gate is generation. The gate is verification. Everything is a loop.</text>
+  <text x="560" y="500" text-anchor="middle" font-size="13" fill="#6E6A5E">A "dark" factory removes the amber box. A "lit" factory keeps a human on it - and adds one more, upstream.</text>
+</svg>
